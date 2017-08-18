@@ -11,7 +11,7 @@ my $help = "perl run_LDA.pl train.set test.set train.group test.group prefix";
 if(!$train_set && !$test_set && !$train_group && !$test_group && !$out){die "$help";}
 ## These two line above were not in my original script.
 LDA:{
-	open ERR,"$Rscript /hwfssz1/ST_META/PN/zhujiahui/meta-analysis/test-cOMG/LDA.R $train_set $test_set $train_group $test_group $out 2>&1|";
+	open ERR,"$Rscript /path/to/your/LDA.R $train_set $test_set $train_group $test_group $out 2>&1|";
 	my @err;my $count=0;
 	while(<ERR>){
 		chomp;
@@ -52,4 +52,6 @@ LDA:{
 	redo LDA;
 }
 `rm *.out`;
-#I did not put the entire file into the swap because files I used to process had millions of lines and variables. Whether there is a better way to remove uncapable variables haven't come to my mind. If some brilliant minds find out how to improve it, please let me know.
+#I did not put the entire file into the swap because files I used to process had millions of lines and variables. 
+#Whether there is a better way to remove uncapable variables haven't come to my mind. 
+#If some brilliant minds find out how to improve it, please let me know.
