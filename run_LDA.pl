@@ -54,4 +54,4 @@ LDA:{
 `rm *.out`;
 #I did not put the entire file into the swap because files I used to process had millions of lines and variables. 
 #Whether there is a better way to remove uncapable variables haven't come to my mind. 
-#If some brilliant minds find out how to improve it, please let me know.
+#If any brilliant minds find out how to improve it, please let me know.
