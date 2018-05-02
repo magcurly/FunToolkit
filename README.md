@@ -14,4 +14,5 @@ You don't have to read this bullock.
 Warning: Because the scripts are super easy, You may not find my annotation. Please notice this.
 
 Anyway, if you have better ideas, contact me through commends. I will set a proper email address for this account later.
-Your sincere Margaret the Curly Hair.
+
+Margaret C
