@@ -33,7 +33,7 @@ library(ggplot2)
 library(grid)
 
 dat = data.frame(data.dudi$li[,1:2])
-#groups = c("IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","UC","UC","UC","UC","UC","UC","UC","UC")
+##groups = c("IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","IBD","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","Healthy","UC","UC","UC","UC","UC","UC","UC","UC")
 gr <- read.table(args[2],check.names=F)
 groups <- gr[,2]
 
@@ -53,14 +53,6 @@ plot(dat,pch=p[as.numeric(groups2)],cex=1,col=col_pool[as.numeric(groups2)],xlim
 grid(col="grey")
 abline(h=0)
 abline(v=0)
-#lines(c((dat["CL100018628_L02_32",1]+dat["CL100018628_L02_34",1])/2,(dat["CL100018628_L02_35",1]+dat["CL100018628_L02_36",1])/2),c((dat["CL100018628_L02_32",2]+dat["CL100018628_L02_34",2])/2,(dat["CL100018628_L02_35",2]+dat["CL100018628_L02_36",2])/2),lty=3,lwd=1)
-arrows((dat["CL100018628_L02_37",1]+dat["CL100018628_L02_38",1])/2,(dat["CL100018628_L02_37",2]+dat["CL100018628_L02_38",2])/2,(dat["CL100018628_L02_39",1]+dat["CL100018628_L02_40",1])/2,(dat["CL100018628_L02_39",2]+dat["CL100018628_L02_40",2])/2,length=0.05,lty=5,lwd=1)
-arrows((dat["CL100018628_L02_39",1]+dat["CL100018628_L02_40",1])/2,(dat["CL100018628_L02_39",2]+dat["CL100018628_L02_40",2])/2,(dat["CL100018628_L02_32",1]+dat["CL100018628_L02_34",1])/2,(dat["CL100018628_L02_32",2]+dat["CL100018628_L02_34",2])/2,length=0.05,lty=5,lwd=1)
-arrows((dat["CL100018628_L02_39",1]+dat["CL100018628_L02_40",1])/2,(dat["CL100018628_L02_39",2]+dat["CL100018628_L02_40",2])/2,(dat["CL100018628_L02_35",1]+dat["CL100018628_L02_36",1])/2,(dat["CL100018628_L02_35",2]+dat["CL100018628_L02_36",2])/2,length=0.05,lty=5,lwd=1)
-text((dat["CL100018628_L02_37",1]+dat["CL100018628_L02_38",1])/2,(dat["CL100018628_L02_37",2]+dat["CL100018628_L02_38",2])/2,"UC_1106",pos=1,cex=0.6,col="black")
-text((dat["CL100018628_L02_39",1]+dat["CL100018628_L02_40",1])/2,(dat["CL100018628_L02_39",2]+dat["CL100018628_L02_40",2])/2,"UC_1114",pos=1,cex=0.6,col="black")
-text((dat["CL100018628_L02_32",1]+dat["CL100018628_L02_34",1])/2,(dat["CL100018628_L02_32",2]+dat["CL100018628_L02_34",2])/2,"UC_0119",pos=1,cex=0.6,col="black")
-text((dat["CL100018628_L02_35",1]+dat["CL100018628_L02_36",1])/2,(dat["CL100018628_L02_35",2]+dat["CL100018628_L02_36",2])/2,"UC_0119B",pos=1,cex=0.6,col="black")
 legend(par("usr")[2],par("usr")[4],cex=1,x.intersp=0.4,pt.cex=1,unique(groups),pch=p,col=col_pool,text.font=2,ncol=1,xpd=TRUE,bty="o")
 
 #s.class(dfxy = dat, fac = groups2, col=col_pool, xax = 1, yax = 2 ,add.plot = TRUE )
