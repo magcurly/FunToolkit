@@ -46,7 +46,7 @@ p = c(17,17,20,20,20,20)
 
 #p
 col_pool <- brewer.pal(nlevels(groups2),"Set1")
-#col_pool
+#draw PCA Point Plot and use colour to separate them into groups
 plot(dat,pch=p[as.numeric(groups2)],cex=1,col=col_pool[as.numeric(groups2)],xlim=c(min(dat[,1])-adjst1,max(dat[,1])+adjst1), ylim=c(min(dat[,2])-adjst2,max(dat[,2])+adjst2),main="PCA based on species profile",xlab=paste("PC1","(",pca1,"%",")",sep=""),ylab=paste("PC2","(",pca2,"%",")",sep=""),bty="o")
 #text(dat[,1],dat[,2],row.names(dat),pos=3,cex=0.6,col=col_pool)
 
