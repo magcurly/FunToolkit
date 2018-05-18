@@ -22,7 +22,7 @@ for my $pd(@prjdir){
 		$tb=(split /\s+/,$line)[-1]; #get total base number
 		undef $line;
 		close STAT;
-		open BS,"$d/03.Ass/best.ass";
+		open BS,"$d/03.Ass/best.ass"; #The Genome is assembled by SPAdes
 		chomp(my $bs=<BS>);
 		close BS;
 		open AST,"$d/03.Ass/ss.txt";
