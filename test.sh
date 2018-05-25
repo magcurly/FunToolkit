@@ -1,0 +1,1 @@
+/hwfssz1/ST_META/PN/zhujiahui/R/bin/Rscript /hwfssz1/ST_META/PN/zhujiahui/bacteria-gene/script/03.taxo/nt/add_taxid_name.R /hwfssz1/ST_META/PN/zhujiahui/bacteria-gene/script/03.taxo/nt/test.table /hwfssz1/ST_META/PN/zhujiahui/bacteria-gene/script/03.taxo/nt/count
