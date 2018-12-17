@@ -33,5 +33,3 @@ def script(rmhost_list,sample_list,pro):
             script='if [ -f '+line1+' ];then'+'\n\tzcat '+line1+'>'+
             
 
-
-
