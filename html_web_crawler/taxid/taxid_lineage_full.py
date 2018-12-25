@@ -62,3 +62,6 @@ class tax_object():
         self._lineage=info['lineage']
         self._parent_txid=info['parent_id']
         self._rank=info['rank']
+    
+    def printtax(self):
+        return self._name+'\t'+self._txid+'\t'+self._parent_txid+'\t'+self._lineage+'\t'+self._rank
