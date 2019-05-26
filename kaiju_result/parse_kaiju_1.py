@@ -1,8 +1,8 @@
 import sys,os,re,argparse,shutil
 
-def kaiju2seqtaxon(kaiju_output,taxon_level,outdir,prefix,node,name):
+def kaiju2seqtaxon(kaiju_output,taxon_level,outdir,node,name):
     taxon_names=shutil.which('addTaxonNames')
-    outfile=outdir+'/'+prefix+'_kaiju_nameadded'
+    outfile=outdir+'/'+kaiju_output+'_nameadded'
     tax_rank=','.join(taxon_level)
     cmd=taxon_names+' -r '+tax_rank+' -i '+kaiju_output+' -t '+node+' -n '+name+' -o '+outfile
     os.system(cmd)
@@ -10,9 +10,9 @@ def kaiju2seqtaxon(kaiju_output,taxon_level,outdir,prefix,node,name):
     file=open(outfile,'r')
     output_file=[]
     for rank in taxon_level:
-        rankfile=outdir+'/'+prefix+'_gene2'+rank+'.lst'
-        r_o=open(rankfile,'w')
-        output_file.append(r_o)
+        rankfile=outdir+'/'+prefix+'.'+rank
+        output_file.append(open(rankfile,'w'))
+        
     #Parsing the kaiju result
     for line in file:
         line=line.strip('\n')
@@ -27,12 +27,11 @@ def kaiju2seqtaxon(kaiju_output,taxon_level,outdir,prefix,node,name):
             tax='Unclassified'
             taxon=[tax]*len(taxon_level)
         seqID=arr[1]
-        for j in range(0,len(output_file)):
-            string=seqID+'\t'+taxon[j]+'\n'
-            output_file[j].write(string)
+    
+    
     file.close()
-    for i in output_file:
-        i.close()
+
+
 
 def main():
     parser=argparse.ArgumentParser()
@@ -46,5 +45,6 @@ def main():
     if args.input is None or args.node is None or args.name is None :
         parser.parse_args(['-h'])
         sys.exit(0)
-    kaiju2seqtaxon(args.input,args.levels,args.outdir,args.prefix,args.node,args.name)
+    try:
+
 main()
