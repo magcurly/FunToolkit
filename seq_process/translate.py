@@ -22,7 +22,7 @@ def translate_dna(input_handle,output_handle,table_code):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--input','-i', help='fasta file with DNA needs to be translated')
-    parser.add_argument('--output','-o'，help='output amino acid sequences in fasta format')
+    parser.add_argument('--output','-o',help='output amino acid sequences in fasta format')
     parser.add_argument('--table','-t',default=11,help='codon table, default is 11 ')
     args=parser.parse_args()
     if re.search(r'gz',args.input):
